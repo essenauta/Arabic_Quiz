@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+ </head>
+ <body>
+ <div class="instructions">
+  <p class="arabic_text">:تعليمات</p>
+
+  <p class="arabic_text">صَرِف الجذر الى الأوزان المشار إليها</p>
+
+  <p class="arabic_text">اكتب الحركات في كل الحالات إلا قبل حروف المد الطويلة أو في آخر الكلمة إذا كانت الحركة على الحرف الأخير تعتمد على موقع الكلمة في الجملة</p>
+
+  <p class="arabic_text">حين كتابة الترجمة الإنجليزية الرجاء كتابة اكلمة على هذا النحو<span dir="ltr">to X :</span</p>
+ </div>
+ <br>
+ <div class="instructions">
+  <p class="English_text">Instructions:</p>
+
+  <p class="English_text">Decline and conjugate the given root into its various forms</p>
+
+  <p class="English_text">Write the diacritics in all cases except the following:</p>
+   <ol class="English_text">
+    <li>Before long vowels</li>
+    <li>At the end of a word where the final diacritc varies depending on the role of the word in a sentence</li>
+   </ol>
+  <p class="English_text">When translating the word to English translate it in the form: to X where X is the action the word refers to</p>
+ </div>
+ <br>
+ <div class='answer_message'><a href="{{ url_for('quiz') }}" class='answer_message'>تابع</a></div>
+ <div class='credit'><a class='center_text' href='https://oud.neocities.org'>Developed by Benjamin Omar Allen</a></div>
+ </body>

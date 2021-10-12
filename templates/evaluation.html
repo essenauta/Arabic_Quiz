@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+ </head>
+ <body>
+  <p class='answer_message'>{{ msg }}</p>
+  <p class='answer_message'>{{ answers_correct }} / 7</p>
+  <table class='center'>
+   <tr>
+    <th>الإجابة الصحيحة</th>
+    <th>اجابتك</th>
+   </tr>
+   <tr>
+    <td> {{ correct1 }} </td>
+    <td> {{ answer1 }} </td>
+   </tr>
+   <tr>
+    <td> {{ correct2 }} </td>
+    <td> {{ answer2 }} </td>
+   </tr>
+   <tr>
+    <td> {{ correct3 }} </td>
+    <td> {{ answer3 }} </td>
+   </tr>
+   <tr>
+    <td> {{ correct4 }} </td>
+    <td> {{ answer4 }} </td>
+   </tr>
+   <tr>
+    <td> {{ correct5 }} </td>
+    <td> {{ answer5 }} </td>
+   </tr>
+   <tr>
+    <td> {{ correct6 }} </td>
+    <td> {{ answer6 }} </td>
+   </tr>
+   <tr>
+    <td> {{ correct7 }} </td>
+    <td> {{ answer7 }} </td>
+   </tr>
+  </table>
+  <div class='answer_message'><a class='answer_message' href='{{ url_for('quiz') }}'>جرب مرة أخرى</a></div>
+  <div class='credit'><a class='center_text' href='https://oud.neocities.org'>Developed by Benjamin Omar Allen</a></div>
+ </body>
