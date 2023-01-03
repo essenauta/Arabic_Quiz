@@ -4,27 +4,6 @@ import csv
 import random
 from urllib.request import urlopen
 
-def generate_word():
-    random.seed()
-    form_number = random.randrange(1,11,1)
-    url = url_for('static', filename='Form'+str(form_number)+'.csv')
-    path = 'static/Form' + str(form_number) + '.csv'
-
-    words = []
-
-    with open(path) as csv_file:
-        csv_reader = csv.DictReader(csv_file)
-        line_count = 0
-        for row in csv_reader:
-            if line_count > 0:
-                words.append(row)
-            line_count += 1
-
-    #generate random index pointing to word from csv file
-    random.seed()
-    word_index = random.randrange(1,len(words),1)
-    return words[word_index], form_number
-
 app = Flask(__name__)
 
 @app.route('/')

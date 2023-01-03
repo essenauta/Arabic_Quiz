@@ -11,4 +11,3 @@ class AnswerForm(FlaskForm):
     AlMudaria = StringField('المضارع')
     AlAmr = StringField('الأمر')
     English = StringField('English')
-    submit = SubmitField('Submit')

@@ -1,4 +1,4 @@
-from flask import Flask, render
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from config import config
 
@@ -12,6 +12,6 @@ def create_app(config_name):
     db.init_app(app)
 
     from .main import main as main_blueprint
-    app.register_blueprint(main_blueprint)A
+    app.register_blueprint(main_blueprint)
 
     return app

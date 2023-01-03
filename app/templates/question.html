@@ -4,24 +4,18 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
  </head>
  <body>
-  <h1 class='white'>{{ root }}</h1>
-  <h1 class='white'>Form {{ verb_form }}</h1>
-  <form action="/results" class='center_text'>
-   <label for='almasdar'>المصدر</label><br>
-   <input autocomplete='off' type='text' name='almasdar'><br>
-   <label for='fael'>إسم فاعل</label><br>
-   <input autocomplete='off' type='text' name='fael'><br>
-   <label for='mafeul'>إسم مفعول</label><br>
-   <input autocomplete='off' type='text' name='mafeul'><br>
-   <label for='almadi'>الماضي</label><br>
-   <input autocomplete='off' type='text' name='almadi'><br>
-   <label for='almudarie'>المضارع</label><br>
-   <input autocomplete='off' type='text' name='almudarie'><br>
-   <label for='alamr'>الأمر</label><br>
-   <input autocomplete='off' type='text' name='alamr'><br>
-   <label for='English'>English</label><br>
-   <input autocomplete='off' type='text' name='English'><br>
-   <input type='submit' value='Continue'>
-  </form>
+  <h1 class='white'>{{ faala.al_jidhr }}</h1>
+  <h1 class='white'>Form {{ faala.form }}</h1>
+  <form method="POST" action="">
+    {{ formAnswer.csrf_token }}
+    <table><tr><td>{{ formAnswer.AlMasdar.label }} {{ formAnswer.AlMasdar(size=20) }}</td></tr>
+    <tr><td>{{ formAnswer.AsmaAlFail.label }} {{ formAnswer.AsmaAlFail(size=20) }}</td></tr>
+    <tr><td>{{ formAnswer.AsmaAlMafoul.label }} {{ formAnswer.AsmaAlMafoul(size=20) }}</td></tr>
+    <tr><td>{{ formAnswer.AlMadi.label }} {{ formAnswer.AlMadi(size=20) }}</td></tr>
+    <tr><td>{{ formAnswer.AlMudaria.label }} {{ formAnswer.AlMudaria(size=20) }}</td></tr>
+    <tr><td>{{ formAnswer.AlAmr.label }} {{ formAnswer.AlAmr(size=20) }}</td></tr>
+    <tr><td>{{ formAnswer.English.label }} {{ formAnswer.English(size=20) }}</td></tr>
+    <tr><td><input type="submit" value="Continue"></td></tr></table>
+</form>
   <div class='credit'><a class='center_text' href='https://oud.neocities.org'>Developed by Benjamin Omar Allen</a></div>
  </body>
