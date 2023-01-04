@@ -3,6 +3,6 @@
 # Ignore all text files
 *.txt
 # Ignore virtual environment directory
-.venv
+venv
 # Ignore pycache
-.__pycache__
+__pycache__
